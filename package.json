@@ -1,0 +1,27 @@
+{
+  "name": "quran-api",
+  "version": "1.0.0",
+  "description": "quran.json",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro",
+    "dev": "micro-dev"
+  },
+  "keywords": [
+    "quran",
+    "api",
+    "micro",
+    "zeit",
+    "json",
+    "xml2js"
+  ],
+  "author": "Allen Hai <hai@growinfinitely.com>",
+  "license": "MIT",
+  "dependencies": {
+    "micro": "^9.0.2",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "micro-dev": "^2.1.0"
+  }
+}
