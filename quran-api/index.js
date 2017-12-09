@@ -3,10 +3,16 @@ const {send} = require('micro')
 const parseString = require('xml2js').parseString
 
 module.exports = async (req, res) => {
-  fs.readFile(__dirname + '/quran.xml').then((data) => {
-    parseString(data, (err, results) => (send(res, 200, results)))
+  const file = await fs.readFile(__dirname + '/quran.xml')
+
+  parseString(file, (err, json) => {
+    switch(req.url) {
+      case '/': send(res, 200, json)
+      case '/1': send(res, 200, json.quran.sura[0])
+    }
   })
 }
+
 	
 
 
